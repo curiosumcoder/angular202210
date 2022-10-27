@@ -23,7 +23,9 @@
 	* https://icons.getbootstrap.com/
 
 5. Quitar todo el HTML del componente inicial (app.component.html).
-6. Agregar Bootstrap.
+6. Ejecutar la aplicación.
+	* ng serve --open
+8. Agregar Bootstrap.
 <hr/>
 		...
 
