@@ -32,6 +32,15 @@
 
 9. Crear la defición de un nuevo tipo de datos.
 	* ng g interface model\IProduct
+	* <pre>
+	export interface IProduct {
+	  id: number;
+	  productName: string;
+	  quantityPerUnit: string;
+	  unitPrice: number;
+	  unitsInStock: number;
+	}
+	</pre>
 	
 9. Crear un nuevo módulo.
 	* ng g module product
