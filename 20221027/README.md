@@ -3,7 +3,7 @@
 ### Pasos a seguir
 
 1. Crear una nueva aplicación de Angular
-* ng new Northwind0 --skip-git --skip-install --skip-tests
+	* ng new Northwind0 --skip-git --skip-install --skip-tests
 2. Restaurar los paquetes requeridos
 yarn, o npm install
 
