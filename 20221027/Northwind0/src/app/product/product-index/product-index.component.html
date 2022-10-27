@@ -20,6 +20,12 @@
   <p>No data!</p>
 </ng-template> -->
 
+<div [ngSwitch]="products.length">
+  <p *ngSwitchCase="1">Hay 1 dato.</p>
+  <p *ngSwitchCase="2">Hay 2 datos.</p>
+  <p *ngSwitchDefault>Hay como {{products.length}} datos.</p>
+</div>
+
 <app-product-edit [item]="current"></app-product-edit>
 
 <app-product-list
