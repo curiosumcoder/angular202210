@@ -23,15 +23,27 @@
 	* https://icons.getbootstrap.com/
 
 5. Quitar todo el HTML del componente inicial (app.component.html).
+
 6. Ejecutar la aplicación.
 	* ng serve --open
-8. Agregar Bootstrap.
-<hr/>
-		...
+	
+8. Agregar HTML y Bootstrap inicial.
+	* https://raw.githubusercontent.com/curiosumcoder/angular202210/main/20221027/Northwind0/src/app/app.component.html
 
-- módulo
-	ng g interface model\IProduct
-	ng g module product
-	ng g service product\product
-	ng g component product\product-index -m product
-	ng g component product\product-list -m product
+9. Crear la defición de un nuecvo tipo de datos.
+	* ng g interface model\IProduct
+	
+9. Crear un nuevo módulo.
+	* ng g module product
+	
+10. Crear un nuevo servicio.
+	* ng g service product\product
+	
+11. Crear nuevos componentes para el módulo de producto.
+	* ng g component product\product-index -m product
+	* ng g component product\product-list -m product
+	* ng g component product\product-edit -m product
+
+0. Generar paquete de instalación
+	* ng build
+	* ng build --configuration=production
