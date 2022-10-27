@@ -52,7 +52,7 @@
 	* ng g component product\product-index -m product
 	* ng g component product\product-list -m product
 	* ng g component product\product-edit -m product
-12. Exponer y consumior el componente product-index
+12. Exponer y consumir el componente product-index
 	* Agregar el exports correspondiente en el módulo product
 	* Agregar los imports correspondientes en el módulo app
 
