@@ -5,7 +5,7 @@
 1. Crear una nueva aplicación de Angular
 	* ng new Northwind0 --skip-git --skip-install --skip-tests
 2. Restaurar los paquetes requeridos
-yarn, o npm install
+	* yarn, o npm install
 
 - quitar el html del componente inicial
 - agregar bootstrap
