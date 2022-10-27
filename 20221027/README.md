@@ -52,7 +52,10 @@
 	* ng g component product\product-index -m product
 	* ng g component product\product-list -m product
 	* ng g component product\product-edit -m product
+12. Exponer y consumior el componente product-index
+	* Agregar el exports correspondiente en el módulo product
+	* Agregar los imports correspondientes en el módulo app
 
-0. Generar paquete de instalación
+14. Generar paquete de instalación
 	* ng build
 	* ng build --configuration=production
