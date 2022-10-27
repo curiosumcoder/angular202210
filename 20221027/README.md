@@ -4,7 +4,7 @@
 
 1. Crear una nueva aplicación de Angular
 	* ng new Northwind0 --skip-git --skip-install --skip-tests
-2. Agragar paquetes adicionales
+2. Agregar paquetes adicionales
 	* npm install bootstrap
 	* npm i bootstrap-icons
 3. Restaurar los paquetes requeridos
