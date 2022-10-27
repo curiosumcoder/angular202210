@@ -27,11 +27,20 @@
 6. Ejecutar la aplicación.
 	* ng serve --open
 	
-8. Agregar HTML y Bootstrap inicial.
+8. Agregar HTML y Bootstrap inicial a la plantilla app.component.html.
 	* https://raw.githubusercontent.com/curiosumcoder/angular202210/main/20221027/Northwind0/src/app/app.component.html
 
-9. Crear la defición de un nuecvo tipo de datos.
+9. Crear la defición de un nuevo tipo de datos.
 	* ng g interface model\IProduct
+	<pre>
+	export interface IProduct {
+	  id: number;
+	  productName: string;
+	  quantityPerUnit: string;
+	  unitPrice: number;
+	  unitsInStock: number;
+	}
+	</pre>
 	
 9. Crear un nuevo módulo.
 	* ng g module product
@@ -43,7 +52,10 @@
 	* ng g component product\product-index -m product
 	* ng g component product\product-list -m product
 	* ng g component product\product-edit -m product
+12. Exponer y consumior el componente product-index
+	* Agregar el exports correspondiente en el módulo product
+	* Agregar los imports correspondientes en el módulo app
 
-0. Generar paquete de instalación
+14. Generar paquete de instalación
 	* ng build
 	* ng build --configuration=production
