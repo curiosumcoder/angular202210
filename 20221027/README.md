@@ -9,7 +9,7 @@
 	* npm i bootstrap-icons
 3. Restaurar los paquetes requeridos
 	* yarn, o npm install
-4. Modificar la configuración de la aplicación para incluir los CSS y JS necesarios
+4. Modificar la configuración de la aplicación (archivo angular.json) para incluir los CSS y JS necesarios
 <br/>
 	<pre>"styles": [
 	  "src/styles.css",
