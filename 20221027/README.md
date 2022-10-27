@@ -32,7 +32,7 @@
 
 9. Crear la defición de un nuevo tipo de datos.
 	* ng g interface model\IProduct
-	* <pre>
+	<pre>
 	export interface IProduct {
 	  id: number;
 	  productName: string;
