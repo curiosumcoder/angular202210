@@ -15,11 +15,11 @@
   <tbody>
     <tr *ngFor="let p of items">
       <td>
-        <!-- <a style="cursor: pointer;" (click)="onSelect(p)">{{ p.productID }}</a> -->
+        <a style="cursor: pointer;" (click)="onSelect(p)">{{ p.id }}</a>
       </td>
       <td>{{ p.productName | uppercase }}</td>
       <td>{{ p.quantityPerUnit }}</td>
-      <td>{{ p.unitPrice}}</td>
+      <td>{{ p.unitPrice | number: '1.2-4'}}</td>
       <td>{{ p.unitsInStock }}</td>
     </tr>
   </tbody>

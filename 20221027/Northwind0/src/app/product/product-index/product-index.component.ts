@@ -11,6 +11,9 @@ import { IProduct  } from "../../model/iproduct";
 export class ProductIndexComponent implements OnInit {
 
   products: IProduct[] = [];
+  //current: any;
+  //current: IProduct | undefined;
+  current?: IProduct;
 
   constructor(private ps: ProductService) { }
 
@@ -24,5 +27,10 @@ export class ProductIndexComponent implements OnInit {
       console.log(products);
       this.products = products;
     });
+  }
+
+  onSelected(item: IProduct) {
+    this.current = item;
+    console.log(`onSelected: ${JSON.stringify(this.current)}`);
   }
 }

@@ -20,5 +20,8 @@
   <p>No data!</p>
 </ng-template> -->
 
-<app-product-edit></app-product-edit>
-<app-product-list [items]="products"></app-product-list>
+<app-product-edit [item]="current"></app-product-edit>
+
+<app-product-list
+[items]="products"
+(selected)="onSelected($event)"></app-product-list>
