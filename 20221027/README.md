@@ -30,7 +30,7 @@
 8. Agregar HTML y Bootstrap inicial a la plantilla app.component.html.
 	* https://raw.githubusercontent.com/curiosumcoder/angular202210/main/20221027/Northwind0/src/app/app.component.html
 
-9. Crear la defición de un nuecvo tipo de datos.
+9. Crear la defición de un nuevo tipo de datos.
 	* ng g interface model\IProduct
 	
 9. Crear un nuevo módulo.
