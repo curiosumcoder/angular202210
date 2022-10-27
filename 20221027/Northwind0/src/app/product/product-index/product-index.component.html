@@ -1,0 +1,24 @@
+<h3>Product search</h3>
+
+<input #iSearch type="search" placeholder="Search here ..." class="form-control" />
+<button class="btn btn-primary" (click)="search(iSearch.value)">Search</button>
+
+<div class="text-bg-warning p-3" *ngIf="products.length > 0">
+  Items: {{products.length}}
+</div>
+
+<!-- <div class="text-bg-warning p-3" *ngIf="products.length === 0">
+  No data!
+</div> -->
+
+<!-- <ng-container *ngIf="products.length; then productList; else productsEmpty">
+</ng-container>
+<ng-template #productList>
+  <p>Items: {{ products.length }}</p>
+</ng-template>
+<ng-template #productsEmpty>
+  <p>No data!</p>
+</ng-template> -->
+
+<app-product-edit></app-product-edit>
+<app-product-list [items]="products"></app-product-list>

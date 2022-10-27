@@ -1,0 +1,27 @@
+<h3>
+  Product List
+</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Q./Unit</th>
+      <th>Price</th>
+      <th>Inventory</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of items">
+      <td>
+        <!-- <a style="cursor: pointer;" (click)="onSelect(p)">{{ p.productID }}</a> -->
+      </td>
+      <td>{{ p.productName | uppercase }}</td>
+      <td>{{ p.quantityPerUnit }}</td>
+      <td>{{ p.unitPrice}}</td>
+      <td>{{ p.unitsInStock }}</td>
+    </tr>
+  </tbody>
+</table>
+
