@@ -19,10 +19,12 @@
 	"scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
 	</pre>
 
+	* https://getbootstrap.com/
+	* https://icons.getbootstrap.com/
+
+5. Quitar todo el HTML del componente inicial (app.component.html).
+6. Agregar Bootstrap.
 <hr/>
-- quitar el html del componente inicial
-- agregar bootstrap
-	
 		...
 
 - módulo
