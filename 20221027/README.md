@@ -1,7 +1,9 @@
 # Ejercicio del día
 
 ### Pasos a seguir
-ng new ademo3 --skip-git --skip-install --skip-tests
+
+1. Crear una nueva aplicación de Angular
+	ng new Northwind0 --skip-git --skip-install --skip-tests
 yarn
 - quitar el html del componente inicial
 - agregar bootstrap
