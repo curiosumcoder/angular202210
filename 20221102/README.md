@@ -29,6 +29,7 @@
 	
 8. Agregar HTML y Bootstrap inicial a la plantilla app.component.html.
 	* https://raw.githubusercontent.com/curiosumcoder/angular202210/main/20221027/Northwind0/src/app/app.component.html
+	* Cambiar la etiqueda `<app-product-index></app-product-index>` por  `<router-outlet></router-outlet>` existente.
 
 9. Crear la defición de un nuevo tipo de datos.
 	* ng g interface model\IProduct
