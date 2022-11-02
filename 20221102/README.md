@@ -75,9 +75,7 @@
 	}
 	</pre>
 	
-12. Exponer y consumir el componente product-index
-	* Agregar el exports correspondiente en el módulo product
-	* Agregar los imports correspondientes en el módulo app
+12. ...
 
 13. Generar paquete de instalación
 	* ng build
