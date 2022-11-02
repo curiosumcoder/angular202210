@@ -77,6 +77,7 @@
 	
 12. Crear un nuevo servicio para el módulo de product.
 	* ng g service product\product
+	* Usar el siguiente código fuente: https://raw.githubusercontent.com/curiosumcoder/angular202210/main/20221102/Northwind1/src/app/product/product.service.ts
 
 13. Generar paquete de instalación
 	* ng build
