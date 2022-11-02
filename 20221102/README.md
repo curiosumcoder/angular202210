@@ -75,7 +75,8 @@
 	}
 	</pre>
 	
-12. ...
+12. Crear un nuevo servicio para el módulo de product.
+	* ng g service product\product
 
 13. Generar paquete de instalación
 	* ng build
