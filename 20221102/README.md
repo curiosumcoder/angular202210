@@ -71,7 +71,7 @@
 	  quantityPerUnit: string;
 	  unitPrice: number;
 	  unitsInStock: number;
-	  category: ICategory;
+	  category?: ICategory;
 	}
 	</pre>
 	
