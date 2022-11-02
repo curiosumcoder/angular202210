@@ -32,7 +32,7 @@
 5. Crear un nuevo módulo.
 	* ng g module home --routing --routing-scope Root
 	
-6. Crear nuevos componentes para el módulo de producto.
+6. Crear nuevos componentes para el módulo de home.
 	* ng g component home\home-root -m home
 	* ng g component home\home-index -m home
 	* ng g component home\home-page-not-found -m home
