@@ -3,7 +3,7 @@
 ### Pasos a seguir
 
 1. Crear una nueva aplicación de Angular.
-	* ng new Northwind1 --defaults --skip-git --skip-tests --package-manager yarn
+	* ng new Northwind1 --defaults --skip-git --skip-tests
 	
 2. Agregar paquetes adicionales a la aplicación de Angular recien creada.
 	* npm i bootstrap, o yarn add bootstrap
