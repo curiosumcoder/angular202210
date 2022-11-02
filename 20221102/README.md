@@ -49,9 +49,7 @@
 	
 11. Crear nuevos componentes para el módulo de producto.
 	* ng g component product\product-index -m product
-	* ng g component product\product-create-plain -m product	
-	* ng g component product\product-create-reactive -m product
-	* ng g component product\product-create-templated -m product
+	* ng g component product\product-create-plain -m product
 	
 9. Crear la defición de dos nuevos tipo de datos.
 	* ng g interface model\ICategory
@@ -77,12 +75,10 @@
 	}
 	</pre>
 	
-
-	
 10. Crear un nuevo servicio.
 	* ng g service product\product
+	* Sustituir su contenido con ABC
 	
-
 12. Exponer y consumir el componente product-index
 	* Agregar el exports correspondiente en el módulo product
 	* Agregar los imports correspondientes en el módulo app
