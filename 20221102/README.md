@@ -3,11 +3,12 @@
 ### Pasos a seguir
 
 1. Crear una nueva aplicación de Angular.
-	* ng new Northwind1 --skip-git --skip-tests --package-manager yarn
-	* Cuando se solicite si se desea agregar Routing decir que sí.
+	* ng new Northwind1 --defaults --skip-git --skip-tests --package-manager yarn
+	
 2. Agregar paquetes adicionales a la aplicación de Angular recien creada.
 	* npm i bootstrap, o yarn add bootstrap
 	* npm i bootstrap-icons, o yarn add bootstrap-icons
+	
 3. Modificar la configuración de la aplicación (archivo angular.json) para incluir los CSS y JS necesarios
 <br/>
 	<pre>"styles": [
@@ -20,59 +21,38 @@
 
 	* https://getbootstrap.com/
 	* https://icons.getbootstrap.com/
+	
+4. Elimine los siguientes archivos de código fuente de la aplicación.
 
-5. Quitar la mayor parte del HTML del componente inicial (app.component.html).<br/>
-   Dejando únicamente la etiqueta: `<router-outlet></router-outlet>`
+	* app.component.css
+	* app.component.html
+	* app.component.ts
+	* app.module.ts
+
+4. Crear un nuevo módulo.
+	* ng g module home --routing --routing-scope Root
+	
+5. Crear nuevos componentes para el módulo de producto.
+	* ng g component home\home-root -m home
+	* ng g component home\home-index -m home
+	* ng g component home\home-page-not-found -m home
+	
+6. Cambiar el HTML del componente home-root.component.html.<br/>
+   Sustituir el HTML con el siguiente
+   * ABC
 
 6. Ejecutar la aplicación.
 	* ng serve --open
 	
-8. Agregar HTML y Bootstrap inicial a la plantilla app.component.html.<br/>
-   Usar el siguiente código de HTML.
-   
-   `<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><i class="bi bi-house-door-fill"></i></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Product
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Index</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Create 1</a></li>
-            <li><a class="dropdown-item" href="#">Create 2</a></li>
-            <li><a class="dropdown-item" href="#">Create 3</a></li>
-            <li><a class="dropdown-item" href="#">Create 4</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<main class="container">
-
-  <router-outlet></router-outlet>
-
-</main>`
-
-
+9. Crear un nuevo módulo.
+	* ng g module product --routing
+	
+11. Crear nuevos componentes para el módulo de producto.
+	* ng g component product\product-index -m product
+	* ng g component product\product-create-plain -m product	
+	* ng g component product\product-create-reactive -m product
+	* ng g component product\product-create-templated -m product
+	
 9. Crear la defición de dos nuevos tipo de datos.
 	* ng g interface model\ICategory
 	<pre>
@@ -85,6 +65,8 @@
 
 	* ng g interface model\IProduct
 	<pre>
+	import { ICategory } from "./icategory";
+	
 	export interface IProduct {
 	  id: number;
 	  productName: string;
@@ -95,16 +77,12 @@
 	}
 	</pre>
 	
-9. Crear un nuevo módulo.
-	* ng g module product
+
 	
 10. Crear un nuevo servicio.
 	* ng g service product\product
 	
-11. Crear nuevos componentes para el módulo de producto.
-	* ng g component product\product-index -m product
-	* ng g component product\product-list -m product
-	* ng g component product\product-edit -m product
+
 12. Exponer y consumir el componente product-index
 	* Agregar el exports correspondiente en el módulo product
 	* Agregar los imports correspondientes en el módulo app
