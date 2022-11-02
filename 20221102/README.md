@@ -15,7 +15,7 @@
 	  "node_modules/bootstrap/dist/css/bootstrap.min.css",
 	  "node_modules/bootstrap-icons/font/bootstrap-icons.css"
 	],
-	"scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
+    "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
 	</pre>
 
 	* https://getbootstrap.com/
@@ -27,11 +27,62 @@
 6. Ejecutar la aplicación.
 	* ng serve --open
 	
-8. Agregar HTML y Bootstrap inicial a la plantilla app.component.html.
-	* https://raw.githubusercontent.com/curiosumcoder/angular202210/main/20221027/Northwind0/src/app/app.component.html
-	* Cambiar la etiqueda `<app-product-index></app-product-index>` por  `<router-outlet></router-outlet>` existente.
+8. Agregar HTML y Bootstrap inicial a la plantilla app.component.html.<br/>
+   Usar el siguiente código de HTML.
+   
+   `<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="bi bi-house-door-fill"></i></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Product
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Index</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Create 1</a></li>
+            <li><a class="dropdown-item" href="#">Create 2</a></li>
+            <li><a class="dropdown-item" href="#">Create 3</a></li>
+            <li><a class="dropdown-item" href="#">Create 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="container">
 
-9. Crear la defición de un nuevo tipo de datos.
+  <router-outlet></router-outlet>
+
+</main>`
+
+
+9. Crear la defición de dos nuevos tipo de datos.
+	* ng g interface model\ICategory
+	<pre>
+	export interface ICategory {
+		categoryID: number;
+		categoryName: string;
+		description: string;
+	}
+	</pre>
+
 	* ng g interface model\IProduct
 	<pre>
 	export interface IProduct {
@@ -40,6 +91,7 @@
 	  quantityPerUnit: string;
 	  unitPrice: number;
 	  unitsInStock: number;
+	  category: ICategory;
 	}
 	</pre>
 	
