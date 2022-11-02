@@ -21,7 +21,7 @@
 	* https://getbootstrap.com/
 	* https://icons.getbootstrap.com/
 
-5. Quitar la mayor parte del HTML del componente inicial (app.component.html).
+5. Quitar la mayor parte del HTML del componente inicial (app.component.html).<br/>
    Dejando únicamente la etiqueta: `<router-outlet></router-outlet>`
 
 6. Ejecutar la aplicación.
