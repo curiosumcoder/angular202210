@@ -22,7 +22,7 @@
 	* https://icons.getbootstrap.com/
 
 5. Quitar la mayor parte del HTML del componente inicial (app.component.html).
-   Dejando únicamente la etiqueta: <pre><router-outlet></router-outlet></pre>
+   Dejando únicamente la etiqueta: `<router-outlet></router-outlet>`
 
 6. Ejecutar la aplicación.
 	* ng serve --open
