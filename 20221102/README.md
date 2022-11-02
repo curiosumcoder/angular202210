@@ -29,29 +29,29 @@
 	* app.component.ts
 	* app.module.ts
 
-4. Crear un nuevo módulo.
+5. Crear un nuevo módulo.
 	* ng g module home --routing --routing-scope Root
 	
-5. Crear nuevos componentes para el módulo de producto.
+6. Crear nuevos componentes para el módulo de producto.
 	* ng g component home\home-root -m home
 	* ng g component home\home-index -m home
 	* ng g component home\home-page-not-found -m home
 	
-6. Cambiar el HTML del componente home-root.component.html.<br/>
+7. Cambiar el HTML del componente home-root.component.html.<br/>
    Sustituir el HTML con el siguiente
    * ABC
 
-6. Ejecutar la aplicación.
+8. Ejecutar la aplicación.
 	* ng serve --open
 	
 9. Crear un nuevo módulo.
 	* ng g module product --routing
 	
-11. Crear nuevos componentes para el módulo de producto.
+10. Crear nuevos componentes para el módulo de producto.
 	* ng g component product\product-index -m product
 	* ng g component product\product-create-plain -m product
 	
-9. Crear la defición de dos nuevos tipo de datos.
+11. Crear la defición de dos nuevos tipo de datos.
 	* ng g interface model\ICategory
 	<pre>
 	export interface ICategory {
@@ -79,6 +79,6 @@
 	* Agregar el exports correspondiente en el módulo product
 	* Agregar los imports correspondientes en el módulo app
 
-14. Generar paquete de instalación
+13. Generar paquete de instalación
 	* ng build
 	* ng build --configuration=production
