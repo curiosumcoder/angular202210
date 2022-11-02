@@ -7,6 +7,7 @@ import { HomeRootComponent } from './home-root/home-root.component';
 import { HomeIndexComponent } from './home-index/home-index.component';
 import { HomePageNotFoundComponent } from './home-page-not-found/home-page-not-found.component';
 
+import { ProductModule } from '../product/product.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomePageNotFoundComponent } from './home-page-not-found/home-page-not-f
   imports: [
     CommonModule,
     BrowserModule,
+    ProductModule,
     HomeRoutingModule
   ],
   bootstrap: [HomeRootComponent]
