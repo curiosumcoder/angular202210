@@ -39,7 +39,7 @@
 	
 7. Cambiar el HTML del componente home-root.component.html.<br/>
    Sustituir el HTML con el siguiente
-   * ABC
+   * https://raw.githubusercontent.com/curiosumcoder/angular202210/main/20221102/Northwind1/src/app/home/home-root/home-root.component.html
 
 8. Ejecutar la aplicación.
 	* ng serve --open
