@@ -1,0 +1,42 @@
+<h3>Product Create (Templated)</h3>
+
+<div *ngIf="item">
+  <form #mainForm="ngForm" (ngSubmit)="onSave(mainForm)">
+    <dl>
+      <div [ngClass]="{ 'has-error': (pn.touched || pn.dirty) && !pn.valid }">
+        <dt>Name</dt>
+        <dd>
+          <input
+            type="text"
+            name="productName"
+            placeholder="Product Name"
+            class="form-control"
+            required
+            minlength="3"
+            [(ngModel)]="item.productName"
+            #pn="ngModel"
+            [class.is-invalid]="(pn.touched || pn.dirty) && pn.errors"
+          />
+          <ng-container *ngIf="(pn.touched || pn.dirty) && pn.errors">
+            <span *ngIf="pn.errors?.['required']" class="invalid-feedback">
+              El nombre del producto es requerido.
+            </span>
+            <span *ngIf="pn.errors?.['minlength']" class="invalid-feedback">
+              El nombre requiere al menos 3 caracteres.
+            </span>
+          </ng-container>
+          <span [hidden]="pn.valid || pn.pristine" class="invalid-feedback">
+            Nombre es requerido.
+          </span>
+        </dd>
+      </div>
+    </dl>
+    <button type="submit" [disabled]="!mainForm.valid" class="btn btn-primary">
+      Save
+    </button>
+  </form>
+  <br />Dirty: {{ mainForm.dirty }} <br />Touched: {{ mainForm.touched }}
+  <br />Valid: {{ mainForm.valid }} <br />Value: {{ mainForm.value | json }}
+
+  <br />item: {{ item | json }}
+</div>
