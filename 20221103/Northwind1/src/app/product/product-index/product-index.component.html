@@ -24,7 +24,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let p of products | async">
+    <tr *ngFor="let p of products | async; trackBy: productTrackBy">
       <td>
         <a style="cursor: pointer" [routerLink]="['/product', p.id, 'edit']">{{
           p.id

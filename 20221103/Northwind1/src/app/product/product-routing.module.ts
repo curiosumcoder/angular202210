@@ -6,6 +6,7 @@ import { ProductCreatePlainComponent } from './product-create-plain/product-crea
 import { ProductCreateTemplatedComponent } from './product-create-templated/product-create-templated.component';
 import { ProductCreateReactiveComponent } from './product-create-reactive/product-create-reactive.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductResolver } from './product.resolver';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
       { path: 'create', component: ProductCreatePlainComponent },
       { path: 'templated', component: ProductCreateTemplatedComponent },
       { path: 'reactive', component: ProductCreateReactiveComponent },
-      { path: ':id/edit', component: ProductEditComponent}
+      { path: ':id/edit', resolve: { product: ProductResolver }, component: ProductEditComponent}
     ]
   }
 ];

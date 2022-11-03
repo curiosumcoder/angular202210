@@ -7,7 +7,7 @@
       "categoryID": 1,
       "quantityPerUnit": "10 boxes x 20 bags",
       "unitPrice": 18,
-      "unitsInStock": 39,
+      "unitsInStock": "39",
       "unitsOnOrder": 0,
       "reorderLevel": 10,
       "discontinued": false,

@@ -26,6 +26,11 @@ export class ProductIndexComponent implements OnInit {
     );
   }
 
+  productTrackBy(index: number, p: IProduct) {
+    console.log(p.id);
+    return p.id;
+  }
+
   search(term: string): void {
     console.log(`Searching: ${term} ....`);
     this.searchTerms.next(term);
