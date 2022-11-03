@@ -1,1 +1,39 @@
-<p>product-edit works!</p>
+<h3>
+  Product Edit
+</h3>
+
+
+<div *ngIf="item">
+  <dl>
+    <dt>ID</dt>
+    <dd>
+      {{item.id}}
+    </dd>
+
+    <dt>Name</dt>
+    <dd>
+      <input type="text" placeholder="Name" [(ngModel)]="item.productName" class="form-control" />
+    </dd>
+
+    <dt>Quantity / Unit</dt>
+    <dd>
+      <input type="text" placeholder="Quantity / Unit"
+      [(ngModel)]="item.quantityPerUnit" class="form-control" />
+    </dd>
+
+    <dt>Price</dt>
+    <dd>
+      <input type="text" placeholder="Unit price"
+      [(ngModel)]="item.unitPrice" class="form-control" />
+    </dd>
+
+    <dt>Stock</dt>
+    <dd>
+      <input type="text" placeholder="Units in stock"
+      [(ngModel)]="item.unitsInStock" class="form-control" />
+    </dd>
+  </dl>
+  <button type="submit" class="btn btn-primary"  (click)="onSave()">
+    Save
+  </button>
+</div>
