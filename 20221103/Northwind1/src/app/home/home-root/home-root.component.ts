@@ -20,7 +20,10 @@ export class HomeRootComponent implements OnInit {
           if (routerEvent instanceof NavigationEnd ||
               routerEvent instanceof NavigationCancel ||
               routerEvent instanceof NavigationError) {
-              this.loading = false;
+
+                //setTimeout(() => this.loading = false, 5000);
+
+                this.loading = false;
           }
 
           console.log(`HomeRootComponent is loading: ${this.loading}`);

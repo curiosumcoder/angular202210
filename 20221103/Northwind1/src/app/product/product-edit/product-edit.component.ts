@@ -24,6 +24,13 @@ export class ProductEditComponent implements OnInit {
     let id = +this.route.snapshot.params['id'];
     console.log(`ProductEditComponent: id: ${id}`);
 
+    // if (id)
+    // {
+    //   this.ps.get(id).subscribe(product =>{
+    //     this.item = product;
+    //   })
+    // }
+
     // Leer parámetro requerido. Opción #2
     this.route.params.subscribe(params => {
       let id = params['id'];
