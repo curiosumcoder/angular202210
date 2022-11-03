@@ -1,0 +1,47 @@
+<h3>Product - Index</h3>
+
+<button (click)="onCreate()" class="btn btn-primary">Create</button>
+
+<hr/>
+
+<input
+  #isearch
+  (keyup)="search(isearch.value)"
+  placeholder="Search here ..."
+  class="form-control"
+/>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Q./Unit</th>
+      <th>Price</th>
+      <th>Inventory</th>
+      <th>Category</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products | async">
+      <td>
+        <a style="cursor: pointer" [routerLink]="['/product', p.id, 'edit']">{{
+          p.id
+        }}</a>
+      </td>
+      <td>{{ p.productName }}</td>
+      <td>{{ p.quantityPerUnit }}</td>
+      <td>{{ p.unitPrice }}</td>
+      <td>{{ p.unitsInStock | currency: "USD" }}</td>
+      <td>{{ p.category?.categoryName ?? "NA" }}</td>
+      <td
+        title="Delete"
+        style="color: red; cursor: pointer"
+        (click)="onDelete(p.id)">
+        <i class="bi bi-x-square-fill"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

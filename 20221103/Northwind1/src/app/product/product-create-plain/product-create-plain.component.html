@@ -1,0 +1,38 @@
+<h3>
+  Product Create (Plain)
+</h3>
+
+<div *ngIf="item">
+  <dl>
+    <dt>ID</dt>
+    <dd>
+      <input type="number" placeholder="Name" [(ngModel)]="item.id" class="form-control" />
+    </dd>
+
+    <dt>Name</dt>
+    <dd>
+      <input type="text" placeholder="Name" [(ngModel)]="item.productName" class="form-control" />
+    </dd>
+
+    <dt>Quantity / Unit</dt>
+    <dd>
+      <input type="text" placeholder="Quantity / Unit"
+      [(ngModel)]="item.quantityPerUnit" class="form-control" />
+    </dd>
+
+    <dt>Price</dt>
+    <dd>
+      <input type="text" placeholder="Unit price"
+      [(ngModel)]="item.unitPrice" class="form-control" />
+    </dd>
+
+    <dt>Stock</dt>
+    <dd>
+      <input type="text" placeholder="Units in stock"
+      [(ngModel)]="item.unitsInStock" class="form-control" />
+    </dd>
+  </dl>
+  <button (click)="onSave()" class="btn btn-primary">
+    Save
+  </button>
+</div>
