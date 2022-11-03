@@ -4,7 +4,7 @@
 
 1. Crear una copia de la aplicación Northwind1 de Angular.
 
-2. Agregar nuevos componentes y un resolver.
+2. Agregar nuevos componentes y un resolver, a la copia de la aplicación que se hizo en el punto anterior.
 	* ng g component product\product-edit
 	* ng g component product\product-create-templated
 	* ng g component product\product-create-reactive
